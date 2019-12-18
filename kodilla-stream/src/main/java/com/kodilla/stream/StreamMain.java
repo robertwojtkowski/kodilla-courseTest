@@ -44,16 +44,16 @@ public class StreamMain {
 
         //7.3
 
-        Forum theUserList = new Forum();
-        Map<Integer, ForumUser> theResultMap = theUserList.getUserList().stream()
-                .filter(user -> user.getSex() == 'M')
-                .filter(user -> YEARS.between(user.getBirthDate(), LocalDate.now()) >= 20)
-                .filter(user -> user.getPostQuantity() > 0)
-                .collect(Collectors.toMap(ForumUser::getUserID, user -> user));
-        System.out.println("# elements: " + theResultMap.size());
-        theResultMap.entrySet().stream()
-                .map(entry -> entry.getKey() + ": " + entry.getValue())git
-                .forEach(System.out::println);
+//        Forum theUserList = new Forum();
+//        Map<Integer, ForumUser> theResultMap = theUserList.getUserList().stream()
+//                .filter(user -> user.getSex() == 'M')
+//                .filter(user -> YEARS.between(user.getBirthDate(), LocalDate.now()) >= 20)
+//                .filter(user -> user.getPostQuantity() > 0)
+//                .collect(Collectors.toMap(ForumUser::getUserID, user -> user));
+//        System.out.println("# elements: " + theResultMap.size());
+//        theResultMap.entrySet().stream()
+//                .map(entry -> entry.getKey() + ": " + entry.getValue())git
+//                .forEach(System.out::println);
 
 
     }
