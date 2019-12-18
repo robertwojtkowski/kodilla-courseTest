@@ -35,18 +35,20 @@ public class LibraryUser {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof LibraryUser)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
+
         LibraryUser that = (LibraryUser) o;
-        if (!firstname.equals(that.firstname)) return false;
-        if (!lastname.equals(that.lastname)) return false;
-        return peselId.equals(that.peselId);
+
+        if (firstname != null ? !firstname.equals(that.firstname) : that.firstname != null) return false;
+        if (lastname != null ? !lastname.equals(that.lastname) : that.lastname != null) return false;
+        return peselId != null ? peselId.equals(that.peselId) : that.peselId == null;
     }
 
     @Override
     public int hashCode() {
-        int result = firstname.hashCode();
-        result = 31 * result + lastname.hashCode();
-        result = 31 * result + peselId.hashCode();
+        int result = firstname != null ? firstname.hashCode() : 0;
+        result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
+        result = 31 * result + (peselId != null ? peselId.hashCode() : 0);
         return result;
     }
 }
