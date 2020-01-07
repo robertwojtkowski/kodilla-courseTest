@@ -1,5 +1,6 @@
 package com.kodilla.exception.test;
 
+import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,6 +19,8 @@ public class FlightSearch {
         }
         else
             throw new RouteNotFoundException("No such airport");
+
+
 
     }
 }
